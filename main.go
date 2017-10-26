@@ -241,7 +241,7 @@ func (a arriba) updateLastStandup(channelID, userID string, msg standupMsg) {
 		a.standups[channelID] = make(channelStandup)
 	}
 	a.standups[channelID][userID] = msg
-	confirmationText := fmt.Sprintf("<@%s>: ¡Yeppa! standup status recorded :taco:", userID)
+	confirmationText := fmt.Sprintf("<@%s>: ¡Yeppa! standup status recorded : thanks bb :taco:", userID)
 	a.rtm.SendMessage(a.rtm.NewOutgoingMessage(confirmationText, channelID))
 }
 
